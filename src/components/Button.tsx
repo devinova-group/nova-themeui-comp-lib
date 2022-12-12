@@ -1,22 +1,20 @@
 import React from 'react';
 
+import { Button } from 'theme-ui';
+
 export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     backgroundColor?: string;
     color?: string;
 }
 
-export const Button: React.FunctionComponent<IButtonProps> = (props) => {
-    const { children, backgroundColor, color, style } = props;
+export const Buttons: React.FunctionComponent<IButtonProps> = (props) => {
+    const { children, style } = props;
 
-    let _style: React.CSSProperties = style || {};
-
-    /** Override Defaults */
-    if (backgroundColor && _style) _style.backgroundColor = backgroundColor;
-    if (color && _style) _style.color = color;
+    let _style: any = style || {};
 
     return (
-        <button style={_style} {...props}>
+        <Button sx={_style}>
             {children}
-        </button>
+        </Button>
     );
 };

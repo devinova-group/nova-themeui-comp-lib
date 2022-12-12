@@ -3,4 +3,4 @@ export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAt
     backgroundColor?: string;
     color?: string;
 }
-export declare const Button: React.FunctionComponent<IButtonProps>;
+export declare const Buttons: React.FunctionComponent<IButtonProps>;

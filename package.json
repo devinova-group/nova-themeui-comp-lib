@@ -1,6 +1,6 @@
 {
   "name": "nova-themeui-comp-lib",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Component Library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -9,9 +9,8 @@
   ],
   "scripts": {
     "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
-    "build:esm": "",
+    "build:esm": "tsc",
     "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
-
   },
   "author": "Lazar",
   "license": "MIT",
@@ -26,5 +25,8 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "theme-ui": "^0.15.4"
   }
 }
